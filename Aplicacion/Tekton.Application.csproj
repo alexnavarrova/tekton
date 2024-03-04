@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.18.0" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infraestructura\Tekton.infraestructure.csproj" />
+    <ProjectReference Include="..\Dominio\Tekton.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Features\" />
+    <None Remove="Common\" />
+    <None Remove="Features\Customer\Commands\" />
+    <None Remove="MappingsMappings\" />
+    <None Remove="Features\Customer\Queries\" />
+    <None Remove="Features\Product\" />
+    <None Remove="Features\Product\Queries\" />
+    <None Remove="Features\Product\Commands\" />
+    <None Remove="Behaviours\" />
+    <None Remove="Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="Common\" />
+    <Folder Include="Features\Customer\Commands\" />
+    <Folder Include="MappingsMappings\" />
+    <Folder Include="Features\Customer\Queries\" />
+    <Folder Include="Features\Product\" />
+    <Folder Include="Features\Product\Queries\" />
+    <Folder Include="Features\Product\Commands\" />
+    <Folder Include="Behaviours\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+</Project>

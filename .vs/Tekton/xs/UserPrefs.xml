@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{782A7FF4-F65D-4EC6-BB91-9000A312DA91}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Api/Program.cs">
+    <Files>
+      <File FileName="Infraestructura/DataAccess/UnitOfWork.cs" />
+      <File FileName="Api/Controllers/ProductController.cs" Line="9" Column="41" />
+      <File FileName="Api/Program.cs" Line="12" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Tekton" expanded="True">
+            <Node name="Tekton.Api">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="Tekton.infraestructure">
+              <Node name="DataAccess" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Tekton.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

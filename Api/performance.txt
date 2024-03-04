@@ -1,0 +1,15 @@
+﻿3/3/2024 10:21:13 PM: Long Running Request: ProductGetByIdQuery (771 milliseconds) - 
+Tekton.Application.Features.Product.Queries.ProductGetByIdQuery
+
+3/3/2024 10:21:19 PM: Long Running Request: ProductGetByIdQuery (184 milliseconds) - 
+Tekton.Application.Features.Product.Queries.ProductGetByIdQuery
+
+3/3/2024 10:22:11 PM: Long Running Request: ProductGetByIdQuery (740 milliseconds) - 
+Tekton.Application.Features.Product.Queries.ProductGetByIdQuery
+
+3/3/2024 10:22:14 PM: Long Running Request: ProductGetByIdQuery (148 milliseconds) - 
+Tekton.Application.Features.Product.Queries.ProductGetByIdQuery
+
+3/3/2024 10:22:16 PM: Long Running Request: ProductGetByIdQuery (239 milliseconds) - 
+Tekton.Application.Features.Product.Queries.ProductGetByIdQuery
+
