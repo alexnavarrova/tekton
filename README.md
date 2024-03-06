@@ -3,8 +3,6 @@
 DDL:
 CREATE DATABASE tekton;
 
-use tekton;
-
 CREATE TABLE public."Products" (
 	product_id serial4 NOT NULL,
 	"name" varchar(50) NOT NULL,
@@ -38,3 +36,10 @@ INSERT INTO public."ProductStatuses" (status_id, description) VALUES
 
 Configuration:
 Change the values in appsetting
+
+"ConnectionStrings": {
+    "ConnectionString": "Server=127.0.0.1;Port=5432;Database=tekton;User ID=postgres;Password=XXX"
+  },
+  "Parameters": {
+    "PathPerformanceFile": "/Users/alexandernavarro/source/performance.txt"
+  },

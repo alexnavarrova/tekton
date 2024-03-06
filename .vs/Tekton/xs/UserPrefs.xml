@@ -1,28 +1,14 @@
 ﻿<Properties StartupConfiguration="{782A7FF4-F65D-4EC6-BB91-9000A312DA91}|Default">
-  <MonoDevelop.Ide.ItemProperties.Tekton.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" relfile="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" line="16" column="1" />
-      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Tekton.Test/Features/Product/Queries/ProductGetAllQueryHandlerXUnitTests.cs" relfile="Tekton.Test/Features/Product/Queries/ProductGetAllQueryHandlerXUnitTests.cs" line="115" column="1" />
-      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Aplicacion/ApplicationServiceRegistration.cs" relfile="Aplicacion/ApplicationServiceRegistration.cs" line="37" column="13" />
-      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Aplicacion/Behaviours/PerformanceBehaviour.cs" relfile="Aplicacion/Behaviours/PerformanceBehaviour.cs" line="41" column="30" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Aplicacion/Behaviours/PerformanceBehaviour.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="README.md">
     <Files>
-      <File FileName="Aplicacion/Behaviours/PerformanceBehaviour.cs" Line="29" Column="1" />
+      <File FileName="README.md" Line="5" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Tekton">
-            <Node name="Tekton.Application">
-              <Node name="Behaviours">
-                <Node name="PerformanceBehaviour.cs" selected="True" />
-              </Node>
+            <Node name="doc">
+              <Node name="/Users/alexandernavarro/source/Tekton/README.md" selected="True" />
             </Node>
             <Node name="Tekton.Domain" expanded="True">
               <Node name="Entities" expanded="True" />
@@ -33,11 +19,16 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Tekton" selected="True" />
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" relfile="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" line="16" column="1" />
+      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Tekton.Test/Features/Product/Queries/ProductGetAllQueryHandlerXUnitTests.cs" relfile="Tekton.Test/Features/Product/Queries/ProductGetAllQueryHandlerXUnitTests.cs" line="115" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Tekton.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
