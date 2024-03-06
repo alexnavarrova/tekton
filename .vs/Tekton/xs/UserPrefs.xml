@@ -1,38 +1,34 @@
 ﻿<Properties StartupConfiguration="{782A7FF4-F65D-4EC6-BB91-9000A312DA91}|Default">
   <MonoDevelop.Ide.ItemProperties.Tekton.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <Breakpoint file="/Users/alexandernavarro/source/Tekton/Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" relfile="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" line="16" column="1" />
-    <Breakpoint file="/Users/alexandernavarro/source/Tekton/Aplicacion/Features/Product/Commands/ProductCreateCommand.cs" relfile="Aplicacion/Features/Product/Commands/ProductCreateCommand.cs" line="38" column="1" />
+    <BreakpointStore>
+      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" relfile="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" line="16" column="1" />
+      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Tekton.Test/Features/Product/Queries/ProductGetAllQueryHandlerXUnitTests.cs" relfile="Tekton.Test/Features/Product/Queries/ProductGetAllQueryHandlerXUnitTests.cs" line="115" column="1" />
+      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Aplicacion/ApplicationServiceRegistration.cs" relfile="Aplicacion/ApplicationServiceRegistration.cs" line="37" column="13" />
+      <Breakpoint file="/Users/alexandernavarro/source/Tekton/Aplicacion/Behaviours/PerformanceBehaviour.cs" relfile="Aplicacion/Behaviours/PerformanceBehaviour.cs" line="41" column="30" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Aplicacion/Behaviours/PerformanceBehaviour.cs">
     <Files>
-      <File FileName="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" Line="35" Column="63" />
-      <File FileName="Aplicacion/Features/Product/dtos/ProductCreateDto.cs" Line="3" Column="15" />
-      <File FileName="Tekton.Test/Product/Unit/ProductGetByIdQueryHandlerTests.cs" Line="2" Column="11" />
-      <File FileName="Aplicacion/Features/Product/Queries/ProductGetAllQuery.cs" Line="31" Column="47" />
-      <File FileName="Aplicacion/Services/ProductStatusCacheInitializer.cs" Line="31" Column="46" />
+      <File FileName="Aplicacion/Behaviours/PerformanceBehaviour.cs" Line="29" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Tekton" expanded="True">
-            <Node name="Tekton.Api" selected="True" />
-            <Node name="Tekton.Application" expanded="True">
-              <Node name="Features" expanded="True">
-                <Node name="Product" expanded="True">
-                  <Node name="Commands" expanded="True" />
-                </Node>
+          <Node name="Tekton">
+            <Node name="Tekton.Application">
+              <Node name="Behaviours">
+                <Node name="PerformanceBehaviour.cs" selected="True" />
               </Node>
-              <Node name="Services" expanded="True" />
             </Node>
-            <Node name="Tekton.Test">
-              <Node name="Product" expanded="True">
-                <Node name="Integration" expanded="True" />
-                <Node name="Unit" expanded="True" />
-              </Node>
+            <Node name="Tekton.Domain" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="Tekton.infraestructure" expanded="True">
+              <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
         </State>

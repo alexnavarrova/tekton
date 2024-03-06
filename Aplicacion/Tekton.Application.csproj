@@ -15,6 +15,7 @@
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="LazyCache" Version="2.4.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Tekton.Domain.csproj" />
@@ -33,6 +34,7 @@
     <None Remove="Contracts\" />
     <None Remove="Contracts\Persistence\" />
     <None Remove="Contracts\APIs\" />
+    <None Remove="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
@@ -48,5 +50,6 @@
     <Folder Include="Contracts\" />
     <Folder Include="Contracts\Persistence\" />
     <Folder Include="Contracts\APIs\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

@@ -19,7 +19,7 @@ builder.Services.AddMemoryCache();
 builder.Services.AddHttpClient();
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
-builder.Services.AddApplicationServices();
+builder.Services.AddApplicationServices(builder.Configuration);
 
 
 builder.Services.AddCors(options =>
