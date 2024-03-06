@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Api", "Api\Tekton.Api.csproj", "{782A7FF4-F65D-4EC6-BB91-9000A312DA91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Api", "Teckton.Api\Tekton.Api.csproj", "{782A7FF4-F65D-4EC6-BB91-9000A312DA91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.infraestructure", "Infraestructura\Tekton.infraestructure.csproj", "{5016C71E-7709-4BF3-9AA1-75B35E2421F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.infraestructure", "Teckton.Infraestructure\Tekton.Infraestructure.csproj", "{5016C71E-7709-4BF3-9AA1-75B35E2421F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Domain", "Dominio\Tekton.Domain.csproj", "{8B4FE243-FFCA-482F-BAC5-92B709CE90BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Domain", "Teckton.Domain\Tekton.Domain.csproj", "{8B4FE243-FFCA-482F-BAC5-92B709CE90BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Application", "Aplicacion\Tekton.Application.csproj", "{6D7BC638-D043-4726-BC22-64A706E6A162}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Application", "Teckton.Application\Tekton.Application.csproj", "{6D7BC638-D043-4726-BC22-64A706E6A162}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tekton.Application.UnitTest", "Tekton.Test\Tekton.Application.UnitTest.csproj", "{B93ED438-71DB-4F4A-8B3A-CF3566C11038}"
 EndProject

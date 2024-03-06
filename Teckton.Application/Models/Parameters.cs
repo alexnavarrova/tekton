@@ -2,7 +2,7 @@
 {
 	public class Parameters
 	{
-		public string PathPerformanceFile { get; set; }
+		public string? PathPerformanceFile { get; set; }
 	}
 }
 

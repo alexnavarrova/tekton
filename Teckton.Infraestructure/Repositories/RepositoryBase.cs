@@ -25,9 +25,9 @@ namespace Tekton.infraestructure.Repositories
             return await _context.Set<T>().Where(predicate).ToListAsync();
         }
 
-        public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate = null,
-                                       Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
-                                       string includeString = null,
+        public async Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>>? predicate = null,
+                                       Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+                                       string? includeString = null,
                                        bool disableTracking = true)
         {
             IQueryable<T> query = _context.Set<T>();

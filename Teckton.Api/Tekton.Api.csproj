@@ -13,10 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aplicacion\Tekton.Application.csproj">
+    <ProjectReference Include="..\Teckton.Application\Tekton.Application.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\Infraestructura\Tekton.infraestructure.csproj">
+    <ProjectReference Include="..\Teckton.Infraestructure\Tekton.Infraestructure.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>

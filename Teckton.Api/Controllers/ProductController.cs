@@ -1,12 +1,8 @@
-﻿using System.Data;
-using System.Net;
-using MediatR;
-using Microsoft.AspNetCore.Authorization;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Tekton.Application.Features.Product.Commands;
 using Tekton.Application.Features.Product.dtos;
 using Tekton.Application.Features.Product.Queries;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Tekton.Api.Controllers;
 

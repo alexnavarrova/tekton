@@ -35,6 +35,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Aplicacion\Tekton.Application.csproj" />
+    <ProjectReference Include="..\Teckton.Application\Tekton.Application.csproj" />
+    <ProjectReference Include="..\Teckton.Domain\Tekton.Domain.csproj" />
   </ItemGroup>
 </Project>
