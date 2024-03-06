@@ -1,4 +1,4 @@
-﻿namespace micro_syncbg.Errors
+﻿namespace Tekton.Api.Errors
 {
     public class CodeErrorResponse
     {
@@ -19,7 +19,7 @@
                 400 => "El Request enviado tiene errores",
                 401 => "No tienes authorizacion para este recurso",
                 404 => "No se encontró el recurso solicitado",
-                500 => "Se producieroón errores en el servidor",
+                500 => "Se producierón errores en el servidor",
                 _ => string.Empty
             };
         }

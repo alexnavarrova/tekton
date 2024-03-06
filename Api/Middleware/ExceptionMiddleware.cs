@@ -1,21 +1,19 @@
 ﻿using System.Net;
-using micro_syncbg.Errors;
+using Tekton.Api.Errors;
 using Newtonsoft.Json;
 using Tekton.Application.Exceptions;
 
-namespace micro_syncbg.Middleware
+namespace Tekton.Api.Middleware
 {
     public class ExceptionMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionMiddleware> _logger;
-        private readonly IHostEnvironment _env;
 
-        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger, IHostEnvironment env)
+        public ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger)
         {
             _next = next;
             _logger = logger;
-            _env = env;
         }
 
         public async Task InvokeAsync(HttpContext context)
@@ -33,17 +31,16 @@ namespace micro_syncbg.Middleware
 
                 switch (ex)
                 {
-                    case NotFoundException notFoundException:
+                    case NotFoundException:
                         statusCode = (int)HttpStatusCode.NotFound;
                         break;
 
                     case ValidationException validationException:
                         statusCode = (int)HttpStatusCode.BadRequest;
-                        var validationJson = JsonConvert.SerializeObject(validationException.Errors);
-                        result = JsonConvert.SerializeObject(new CodeErrorException(statusCode, ex.Message, validationJson));
+                        result = JsonConvert.SerializeObject(new CodeErrorException<IDictionary<string, string[]>>(statusCode, ex.Message, validationException.Errors));
                         break;
 
-                    case BadRequestException badRequestException:
+                    case BadRequestException:
                         statusCode = (int)HttpStatusCode.BadRequest;
                         break;
 
@@ -52,7 +49,7 @@ namespace micro_syncbg.Middleware
                 }
 
                 if (string.IsNullOrEmpty(result))
-                    result = JsonConvert.SerializeObject(new CodeErrorException(statusCode, ex.Message, ex.StackTrace));
+                    result = JsonConvert.SerializeObject(new CodeErrorException<string>(statusCode, ex.Message, ex?.StackTrace ?? ""));
 
 
                 context.Response.StatusCode = statusCode;

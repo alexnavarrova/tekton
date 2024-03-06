@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.1"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="xunit" Version="2.7.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.7"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.2" />
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="AutoFixture" Version="4.18.1" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Features\" />
+    <None Remove="Features\Product\" />
+    <None Remove="Features\Product\Command\" />
+    <None Remove="Features\Product\Queries\" />
+    <None Remove="Mocks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+    <Folder Include="Features\Product\" />
+    <Folder Include="Features\Product\Command\" />
+    <Folder Include="Features\Product\Queries\" />
+    <Folder Include="Mocks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Infraestructura\Tekton.infraestructure.csproj" />
+    <ProjectReference Include="..\Api\Tekton.Api.csproj" />
+    <ProjectReference Include="..\Dominio\Tekton.Domain.csproj" />
+  </ItemGroup>
+</Project>

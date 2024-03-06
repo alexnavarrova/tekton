@@ -4,7 +4,7 @@ namespace Tekton.Application.Exceptions
 {
     public class ValidationException : ApplicationException
     {
-        public ValidationException() : base("Se presentaron uno o mas errores de validacion")
+        public ValidationException() : base("Se presentarón uno o mas errores de validación")
         {
             Errors = new Dictionary<string, string[]>();
         }

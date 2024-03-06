@@ -1,7 +1,12 @@
-﻿using MediatR;
+﻿using System.Data;
+using System.Net;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Tekton.Application.Features.Product.Commands;
 using Tekton.Application.Features.Product.dtos;
 using Tekton.Application.Features.Product.Queries;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Tekton.Api.Controllers;
 
@@ -18,7 +23,7 @@ public class ProductController : ControllerBase
     /// </summary>
     /// <returns>List of products.</returns>
     [HttpGet("GetProducts")]
-    public Task<IEnumerable<ProductDto>> GetProducts() => _mediator.Send(new ProductGetAllQuery());
+    public Task<IEnumerable<ProductDto>> GetProductsAsync() => _mediator.Send(new ProductGetAllQuery());
 
 
     /// <summary>
@@ -27,5 +32,14 @@ public class ProductController : ControllerBase
     /// <param name="productId">The param.</param>
     /// <returns>Product.</returns>
     [HttpGet("GetById/{productId}")]
-    public Task<ProductDto> GetByIdAsync(Guid productId) => _mediator.Send(new ProductGetByIdQuery() { ProductId = productId });
+    public Task<ProductDto> GetByIdAsync(int productId) => _mediator.Send(new ProductGetByIdQuery() { ProductId = productId });
+
+
+    /// <summary>
+    /// Create Product.
+    /// </summary>
+    /// <param name="ProductCreateCommand">The param.</param>
+    /// <returns>Unit</returns>
+    [HttpPost("ProductCreate")]
+    public async Task<Unit> ProductCreateAsync([FromBody] ProductCreateCommand requestCommand) => await _mediator.Send(requestCommand);
 }

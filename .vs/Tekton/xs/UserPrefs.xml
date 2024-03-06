@@ -1,30 +1,47 @@
 ﻿<Properties StartupConfiguration="{782A7FF4-F65D-4EC6-BB91-9000A312DA91}|Default">
+  <MonoDevelop.Ide.ItemProperties.Tekton.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <Breakpoint file="/Users/alexandernavarro/source/Tekton/Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" relfile="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" line="16" column="1" />
+    <Breakpoint file="/Users/alexandernavarro/source/Tekton/Aplicacion/Features/Product/Commands/ProductCreateCommand.cs" relfile="Aplicacion/Features/Product/Commands/ProductCreateCommand.cs" line="38" column="1" />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Api/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs">
     <Files>
-      <File FileName="Infraestructura/DataAccess/UnitOfWork.cs" />
-      <File FileName="Api/Controllers/ProductController.cs" Line="9" Column="41" />
-      <File FileName="Api/Program.cs" Line="12" Column="1" />
+      <File FileName="Tekton.Test/Product/Integration/GetProductQueryHandlerIntegrationTests.cs" Line="35" Column="63" />
+      <File FileName="Aplicacion/Features/Product/dtos/ProductCreateDto.cs" Line="3" Column="15" />
+      <File FileName="Tekton.Test/Product/Unit/ProductGetByIdQueryHandlerTests.cs" Line="2" Column="11" />
+      <File FileName="Aplicacion/Features/Product/Queries/ProductGetAllQuery.cs" Line="31" Column="47" />
+      <File FileName="Aplicacion/Services/ProductStatusCacheInitializer.cs" Line="31" Column="46" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Tekton" expanded="True">
-            <Node name="Tekton.Api">
-              <Node name="Program.cs" selected="True" />
+            <Node name="Tekton.Api" selected="True" />
+            <Node name="Tekton.Application" expanded="True">
+              <Node name="Features" expanded="True">
+                <Node name="Product" expanded="True">
+                  <Node name="Commands" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
-            <Node name="Tekton.infraestructure">
-              <Node name="DataAccess" expanded="True" />
+            <Node name="Tekton.Test">
+              <Node name="Product" expanded="True">
+                <Node name="Integration" expanded="True" />
+                <Node name="Unit" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Tekton" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Tekton.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

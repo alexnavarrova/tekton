@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Tekton.Core.Entities;
+using Tekton.Domain.Entities;
 
-namespace Tekton.Infraestructure
+namespace Tekton.Infraestructure.Services
 {
     public partial class TektonContext : DbContext
     {
@@ -13,6 +13,8 @@ namespace Tekton.Infraestructure
         }
 
         public DbSet<Product> Products => Set<Product>();
+        public DbSet<ProductStatus> ProductStatuses => Set<ProductStatus>();
+        
 
     }
 }

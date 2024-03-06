@@ -1,9 +1,10 @@
 ﻿using MediatR;
 using AutoMapper;
-using Tekton.Core.Messages;
-using Tekton.Application.Features.Product.dtos;
-using Tekton.Infraestructure.Interfaces.DataAccess;
+using Tekton.Application.Messages;
+using Tekton.Application.Services;
 using Tekton.Application.Exceptions;
+using Tekton.Application.Features.Product.dtos;
+using Tekton.Application.Contracts.Persistence;
 
 namespace Tekton.Application.Features.Product.Queries
 {
@@ -11,19 +12,31 @@ namespace Tekton.Application.Features.Product.Queries
 
     public class ProductGetAllQueryHandler : IRequestHandler<ProductGetAllQuery, IEnumerable<ProductDto>>
     {
-        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IProductStatusCacheInitializer _productStatusCacheInitializer;
 
-        public ProductGetAllQueryHandler(IUnitOfWork unitOfWork, IMapper mapper)
+        public ProductGetAllQueryHandler(IUnitOfWork unitOfWork, IMapper mapper, IProductStatusCacheInitializer productStatusCacheInitializer)
         {
-            _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _unitOfWork = unitOfWork;
+            _productStatusCacheInitializer = productStatusCacheInitializer;
         }
 
         public async Task<IEnumerable<ProductDto>> Handle(ProductGetAllQuery request, CancellationToken cancellationToken)
         {
-            var data = await _unitOfWork.ProductRepository.GetAllAsync() ?? throw new NotFoundException(ErrorMessage.NotFoundEntity.Replace("{entity}", "Products"), "");            
-            return _mapper.Map<IEnumerable<Core.Entities.Product>, IEnumerable<ProductDto>>(data);
+            var products = await _unitOfWork.ProductRepository.GetAllAsync()
+                            ?? throw new NotFoundException(ErrorMessage.NotFoundEntity.Replace("{entity}", "Products"), "");            
+
+            var productStatuses = await _productStatusCacheInitializer.GetProductStatuses();
+
+            return products.Select(p =>
+            {
+                var productDto = _mapper.Map<Domain.Entities.Product, ProductDto>(p);
+                var productStatus = productStatuses.FirstOrDefault(x => x.StatusId == p.StatusId);
+                productDto.Status = productStatus?.Description ?? "";
+                return productDto;
+            });
         }
     }
 }

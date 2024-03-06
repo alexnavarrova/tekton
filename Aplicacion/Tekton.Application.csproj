@@ -13,33 +13,40 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.18.0" />
     <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="LazyCache" Version="2.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Infraestructura\Tekton.infraestructure.csproj" />
-    <ProjectReference Include="..\Dominio\Tekton.Core.csproj" />
+    <ProjectReference Include="..\Dominio\Tekton.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Features\" />
     <None Remove="Common\" />
-    <None Remove="Features\Customer\Commands\" />
     <None Remove="MappingsMappings\" />
-    <None Remove="Features\Customer\Queries\" />
     <None Remove="Features\Product\" />
     <None Remove="Features\Product\Queries\" />
     <None Remove="Features\Product\Commands\" />
     <None Remove="Behaviours\" />
     <None Remove="Exceptions\" />
+    <None Remove="Messages\" />
+    <None Remove="Services\" />
+    <None Remove="Contracts\" />
+    <None Remove="Contracts\Persistence\" />
+    <None Remove="Contracts\APIs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
     <Folder Include="Common\" />
-    <Folder Include="Features\Customer\Commands\" />
     <Folder Include="MappingsMappings\" />
-    <Folder Include="Features\Customer\Queries\" />
     <Folder Include="Features\Product\" />
     <Folder Include="Features\Product\Queries\" />
     <Folder Include="Features\Product\Commands\" />
     <Folder Include="Behaviours\" />
     <Folder Include="Exceptions\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Services\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="Contracts\Persistence\" />
+    <Folder Include="Contracts\APIs\" />
   </ItemGroup>
 </Project>

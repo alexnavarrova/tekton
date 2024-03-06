@@ -42,7 +42,7 @@ namespace Tekton.Infraestructure.Interfaces.DataAccess
         /// </summary>
         /// <param name="entity">The Entity.</param>
         /// <returns>true if created, false otherwise.</returns>
-        Task<bool> InsertAsync(TEntity entity);
+        Task<bool> AddEntity(TEntity entity);
 
         /// <summary>
         /// Update the entity asynchronous.

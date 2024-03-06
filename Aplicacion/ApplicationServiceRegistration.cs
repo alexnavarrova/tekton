@@ -3,6 +3,7 @@ using FluentValidation;
 using System.Reflection;
 using Tekton.Application.Behaviours;
 using Microsoft.Extensions.DependencyInjection;
+using Tekton.Application.Services;
 
 namespace Tekton.Application
 {
@@ -21,6 +22,10 @@ namespace Tekton.Application
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
+
+            services.AddScoped(typeof(ICacheRepository<>), typeof(MemoryCacheRepository<>));
+
+            services.AddScoped<IProductStatusCacheInitializer, ProductStatusCacheInitializer>();
 
             return services;
         }

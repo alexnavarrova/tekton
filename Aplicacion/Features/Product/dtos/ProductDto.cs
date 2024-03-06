@@ -1,20 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
+﻿
 namespace Tekton.Application.Features.Product.dtos
 {
 	public class ProductDto
     {
-        public Guid ProductId { get; set; }
+        public int ProductId { get; set; }
 
         public string Name { get; set; } = null!;
 
-        public short StatusId { get; set; }
+        public string Status { get; set; } = null!;
 
         public int Stock { get; set; }
 
         public string Description { get; set; } = null!;
 
-        public decimal Price { get; set; }
+        public double Price { get; set; }
+
+        public float Average { get; set; }
+
+        public double FinalPrice { get; set; }
 
         public string SKU { get; set; } = null!;
     }

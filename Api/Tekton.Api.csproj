@@ -23,9 +23,11 @@
   <ItemGroup>
     <None Remove="Middleware\" />
     <None Remove="Errors\" />
+    <None Remove="Enums\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Middleware\" />
     <Folder Include="Errors\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>

@@ -1,9 +1,11 @@
-﻿namespace micro_syncbg.Errors
+﻿namespace Tekton.Api.Errors
 {
-    public class CodeErrorException : CodeErrorResponse
+    public class CodeErrorException<T> : CodeErrorResponse
     {
-        public string? Details { get; set; }
-        public CodeErrorException(int statusCode, string? message = null, string? details = null) : base(statusCode, message)
+        public T Details { get; set; }
+
+
+        public CodeErrorException(int statusCode, string? message = null, T details = default(T)) : base(statusCode, message)
         {
             Details = details;
         }

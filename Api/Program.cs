@@ -1,6 +1,6 @@
 ﻿using Tekton.Infraestructure;
 using Tekton.Application;
-using micro_syncbg.Middleware;
+using Tekton.Api.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,12 @@ builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMemoryCache();
+
+builder.Services.AddHttpClient();
 
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddApplicationServices();
@@ -34,6 +39,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path == "/")
+    {
+        context.Response.Redirect("/swagger/index.html");
+        return;
+    }
+    await next();
+});
 
 app.UseMiddleware<ExceptionMiddleware>();
 

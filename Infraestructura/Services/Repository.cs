@@ -2,21 +2,21 @@
 using Microsoft.EntityFrameworkCore;
 using Tekton.Infraestructure.Interfaces.DataAccess;
 
-namespace Tekton.Infraestructure.DataAccess
+namespace Tekton.Infraestructure.Services
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         #region Properties
-        protected DbContext DbContext { get; set; }
+        private readonly TektonContext _context;
         protected DbSet<TEntity> Entity { get; set; }
         #endregion
 
-        public Repository(DbContext context)
+        public Repository(TektonContext context)
         {
-            DbContext = context;
-            DbContext.ChangeTracker.LazyLoadingEnabled = true;
-            DbContext.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
-            Entity = DbContext.Set<TEntity>();
+            _context = context;
+            _context.ChangeTracker.LazyLoadingEnabled = true;
+            _context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+            Entity = _context.Set<TEntity>();
         }
 
         #region Queries
@@ -61,25 +61,25 @@ namespace Tekton.Infraestructure.DataAccess
         #endregion
 
         #region Commands
-        public async Task<bool> InsertAsync(TEntity entity)
+        public async Task<bool> AddEntity(TEntity entity)
         {
-            await DbContext.AddAsync(entity);
+            await _context.AddAsync(entity);
 
-            return await DbContext.SaveChangesAsync() > 0;
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> UpdateAsync(TEntity entity)
         {
-            DbContext.Entry(entity).State = EntityState.Modified;
+            _context.Entry(entity).State = EntityState.Modified;
 
-            return await DbContext.SaveChangesAsync() > 0;
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> DeleteAsync(TEntity entity)
         {
-            DbContext.Remove(entity);
+            _context.Remove(entity);
 
-            return await DbContext.SaveChangesAsync() > 0;
+            return await _context.SaveChangesAsync() > 0;
         }
         #endregion
     }
